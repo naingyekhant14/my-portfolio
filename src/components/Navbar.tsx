@@ -15,18 +15,18 @@ const navItems = [
   {
     id: 2,
     label: "About",
-    route: "/about",
+    route: "#about",
   },
 
   {
     id: 3,
     label: "Projects",
-    route: "/project",
+    route: "#project",
   },
   {
     id: 4,
     label: "Contact",
-    route: "/contact",
+    route: "#contact",
   },
 ];
 
@@ -81,7 +81,7 @@ const Navbar = () => {
           >
             <Typography
               sx={{
-                fontSize: 18,
+                fontSize: 20,
                 fontWeight: "bold",
                 color: "primary.main",
                 mt: 2.5,
@@ -96,7 +96,13 @@ const Navbar = () => {
   );
   return (
     <Box
-      sx={{ display: "flex", justifyContent: "space-between", mx: 10, mt: 2 }}
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        bgcolor: "primary.main",
+        mx: 10,
+        mt: 2,
+      }}
     >
       <IconButton
         onClick={handleOpenDrawer}
@@ -137,8 +143,8 @@ const Navbar = () => {
               <Typography
                 sx={{
                   color: "success.main",
-                  fontSize: 18,
-                  fontWeight: "medium",
+                  fontSize: 19,
+                  fontWeight: 800,
                   display: { xs: "none", sm: "block" },
                 }}
               >

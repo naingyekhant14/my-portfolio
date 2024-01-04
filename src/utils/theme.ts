@@ -2,16 +2,16 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#191919",
+      main: "#181818",
     },
     secondary: {
       main: "#292929",
     },
     info: {
-      main: "#FFFFFF",
+      main: "#eeeeee",
     },
     success: {
-      main: "#FFA31A",
+      main: "#FFFFFF",
     },
   },
 });
