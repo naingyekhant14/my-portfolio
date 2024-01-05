@@ -101,7 +101,9 @@ const Navbar = () => {
         justifyContent: "space-between",
         bgcolor: "primary.main",
         mx: 10,
-        mt: 2,
+        position: "sticky",
+        top: 0,
+        py: 1.5,
       }}
     >
       <IconButton
@@ -110,49 +112,58 @@ const Navbar = () => {
       >
         <MenuIcon />
       </IconButton>
-      <Link
-        style={{
-          textDecoration: "none",
-          cursor: "pointer",
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
         }}
-        href={"/"}
       >
-        <Typography
-          sx={{
-            color: "success.main",
-            fontSize: 25,
-            fontWeight: "bold",
-            display: { xs: "none", sm: "block" },
+        <Link
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
           }}
+          href={"/"}
         >
-          NYK
-        </Typography>
-      </Link>
-      <Box sx={{ display: "flex" }}>
-        {navItems.map((item) => {
-          return (
-            <Link
-              style={{
-                textDecoration: "none",
-                cursor: "pointer",
-                marginLeft: 30,
-              }}
-              key={item.id}
-              href={item.route}
-            >
-              <Typography
-                sx={{
-                  color: "success.main",
-                  fontSize: 19,
-                  fontWeight: 800,
-                  display: { xs: "none", sm: "block" },
+          <Typography
+            sx={{
+              color: "success.main",
+              fontSize: 40,
+              fontWeight: "bold",
+              display: { xs: "none", sm: "block" },
+            }}
+          >
+            NYK
+          </Typography>
+        </Link>
+        <Box sx={{ display: "flex" }}>
+          {navItems.map((item) => {
+            return (
+              <Link
+                style={{
+                  textDecoration: "none",
+                  cursor: "pointer",
+                  marginLeft: 30,
                 }}
+                key={item.id}
+                href={item.route}
               >
-                {item.label}
-              </Typography>
-            </Link>
-          );
-        })}
+                <Typography
+                  sx={{
+                    color: "success.main",
+                    fontSize: 20,
+                    fontWeight: 700,
+                    display: { xs: "none", sm: "block" },
+                  }}
+                >
+                  {item.label}
+                </Typography>
+              </Link>
+            );
+          })}
+        </Box>
       </Box>
       <Drawer
         variant="temporary"
